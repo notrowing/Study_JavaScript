@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content
+        {
+           width: 500px;
+            margin: 0 auto;
+        }
+        #projector{
+            background-color: #F5BBB9;
+            border: 2px solid #8CB6E5;
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+            margin: 30px auto;
+        }
+        .wrapper > div {
+            text-align: center;
+            background-color: lightblue;
+            border: 2px solid rgb(79, 185, 227);
+            padding: 10px; border-radius: 5px;
+           
+        }
+        .wrapper {
+            display: grid; grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 33% 33% 33%;
+        }
+    </style>
+</head>
+<body>
+    <h2>랜덤으로 자리 배치 </h2>
+    <hr>
+    <div class="content">
+        <div id="projector">
+            프로젝터 
+        </div>
+    
+        <div class="wrapper">
+            <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    let persons = null;
+    const btn = document.querySelector('#projector');
+
+    btn.addEventListener('click', () => {
+        if(confirm('새로운 자리를 배치합니다.')) {
+            persons = [
+            '강남구', '남달리', '도레미', 
+            '마부장', '라면인', '박관종',
+            '사람임', '엄청나', '지정석'
+            ];
+            persons.sort(() => Math.random() - 0.5);
+            
+            for(let i = 1; i <= persons.length; i++) {
+                document.querySelector(
+                `.wrapper > div:nth-child(${i})`).innerHTML = persons[i-1];
+            }
+        }
+    });
+     
+    </script>
+</html>

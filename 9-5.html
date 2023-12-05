@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KepcoA</title>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded",()=>{});
+        const obj = document.querySelector('h1');
+        console.log(obj);
+        document.body.removeChild(obj);
+    </script> -->
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>■ Event</h2>
+    <h3>● 이벤트 사용 <br> 콘솔과 화면에 'Click'이 출력</h3>    
+    <hr>
+    <h1>여기를 눌러보세요</h1>
+</body>
+<script>
+    const obj2 = document.querySelector('h1');
+    obj2.addEventListener("click", () => {
+        tmp = document.createElement('h2');
+        tmp.textContent="Click";
+        document.body.appendChild(tmp);
+        console.log("Click");
+    });
+</script>
+</html>

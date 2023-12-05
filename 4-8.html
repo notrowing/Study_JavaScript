@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                function simplePrint(){
+                    console.log('simplePrint');
+                }
+
+                const simplePrint2 = function(){
+                    console.log('simplePrint2');
+                }
+            
+                const simplePrint3 = function(){
+                    console.log('simplePrint3');
+                }
+                const simplePrint4 = () => console.log('simplePrint4');
+                
+                const simplePrint5 = () => {
+                    console.log('simplePrint5');
+                }
+
+                const add = function add(x,y){
+                    return x+y;
+                }
+                // 함수 내의 코드가 한줄이면 return 생략
+                const add2 = (a,b) => a+b; 
+
+                console.log(add(3,4));
+                console.log(add2(3,4));
+                simplePrint();
+                simplePrint2();
+                simplePrint3();
+                simplePrint4();
+                simplePrint5();
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='main.html'">돌아가기</button>
+        <h3>Arrow function</h3>
+        <h4>simplePrint</h4>
+       <button type = "button" onclick="execute()">클릭</button>
+
+    </body>
+</html>

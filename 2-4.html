@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Before(){
+            var number = 10;
+            console.log(`1 number: ${number}`);
+            {
+                var number = 100;
+                console.log(`2 number: ${number}`);
+            }
+            console.log(`3 number: ${number}`);
+        }
+
+        function After(){
+            var number = 10;
+            console.log(`1 number: ${number}`);
+            {
+                let number = 100;
+                console.log(`2 number: ${number}`);
+            }
+            console.log(`3 number: ${number}`);
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h3>연습문제 02-연습문제1.html</h3>
+    <p> 콘솔 확인 </p>
+    <button type="button" onclick = "Before()">연습문제 실행 전</button>
+    <button type="button" onclick = "After()">연습문제 실행 후</button>
+</body>
+</html>

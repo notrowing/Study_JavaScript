@@ -1,0 +1,69 @@
+body{
+    width: 700px;
+    margin: 0 auto;
+    background-color: #e9feBB;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+header > h1{
+    width: 60%;
+    height: 50px;
+    font-family: "함초롬바탕";
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #c5e47e;
+    color: green;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: dotted 5px green;
+    background-color:  #faFeEf;
+    margin-bottom: 20px;
+    font-weight: bold;
+  
+}
+.content>h2{
+    display: flex;
+    justify-content: center;
+    font-family: "함초롬돋움";
+    margin-bottom: 0;
+   
+}
+.content>h3{
+    display: flex;
+    justify-content: center;
+    font-family: "함초롬돋움";
+    margin: 0;
+}
+.notice{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.notice > a{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: black;
+}
+
+.notice > a:link, .notice > a:visited{
+    text-decoration: none;
+} 
+.notice>a>span{
+    background-color: #a3db54;
+    border: solid 2px  green;
+    color: black;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+.notice>a>span:hover{
+    border-radius: 5px;
+    background-color: #80Ba41;
+}

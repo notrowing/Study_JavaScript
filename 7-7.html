@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script>
+        
+        const ajax = axios({
+            url:'http://ggoreb.com/api/toc.jsp',
+            method:'get',
+            params:{}
+        });
+        ajax.then(res=>{
+            let code = '<ul class="list-group">';
+            
+            for(const item of res.data){
+                code +=`<li class="list-group-item d-flex justify-content-between align-item-center"
+                            title ="${item.desc}">${item.title}
+                            <span class = "badge bg-primary rounded-fill">
+                                ${item.id}
+                            </span>
+                        </li>`;
+            }
+            code += "</ul>";
+            document.querySelector(".content").innerHTML = code;
+        });
+    </script>
+    <style>
+        .content{
+            color: black;
+        }
+        .badge bg-primary rounded-fill{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>■ AJAX</h2>
+    <p>언어 및 설명 데이터</p>
+    <hr>
+    <div class = "content"></div>
+    <!-- <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-item-center"
+            title = "HTML is for information">
+            <span class = "badge bg-primary rounded-fill"></span>
+        </li>
+    </ul> -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 기본 자료형 : 값 전달
+            function execute(){
+                function changeName(name){
+                    name="Pam";
+                }
+                const name = 'hani';
+                changeName(name);
+                console.log(name);
+
+                // 참조 자료형(객체) 참조 주소 전달 
+                function changeNameByObject(obj){
+                    obj.name="Pam";
+                }
+                const user={name:'hani'};
+                changeNameByObject(user);
+                console.log(user);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='main.html'">돌아가기</button>
+        <h2>4. 함수(Parameter)</h2>
+        <h3>작업을 수행하기 위한 명령문의 집합</h3> 
+        <button type="button" onclick="execute()">실행</button>
+    </body>
+</html>

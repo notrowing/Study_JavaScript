@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const article = {
+            num: 1,
+            title:'A',
+            reply:  
+            [   {num:3, title:"A-3"},
+                {num:3, title:"A-3"},
+                {num:3, title:"A-3"}
+            ]
+        };
+
+        for (key in article){
+            console.log(article[key]);
+        }
+
+        const house = {
+            bathroom :1,
+            room:2,
+            address:['제주도','제주시','연동'],
+            person:[
+                {name:'kim'},
+                {name:'lee'}
+            ]
+        };
+
+        for (key in house){
+            console.log(`${key}, ${house}`);
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>Object 연습문제</h2>
+</body>
+</html>

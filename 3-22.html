@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                const selected=[];
+                const lotto = [1,8,16];
+                while(selected.length<3){
+                    const num = parseInt(Math.random()*45)+1;
+
+                    if(selected.indexOf(num)==-1){
+                        selected.push(num);
+                    }
+                }
+                selected.sort((a,b) => a-b);
+                console.log(selected);
+                
+                if(lotto ==selected.toString()){
+                    console.log("맞히기 성공");
+                }
+
+            }
+
+            function execute2(){
+                let cnt = 0;
+                const lotto = [1,8,16];
+                var isContinue = true;
+
+                while(isContinue!=false){
+                    let selected=[];
+                    cnt+=1;
+                    while(selected.length<3){
+                        const num = parseInt(Math.random()*45)+1;
+                        if(selected.indexOf(num)==-1){
+                            selected.push(num);
+                        }
+                    }
+                    selected.sort((a,b) => a-b);
+                    console.log(selected);
+                
+                    if(lotto==selected.toString()){
+                        console.log("맞히기 성공");
+                        console.log("시도 횟수 : " + cnt);
+                        isContinue = false;
+                    }
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <button type="button" onClick="location.href='main.html'">돌아가기</button>
+        <h3>무작위 번호 맞히기</h3>
+        <h3>1. 중복되지 않는 3개의 번호 추출</h3>
+        <button type="button" onclick="execute()">실행</button>
+        <button type="button" onclick="execute2()"> 중첩 반복문 실행</button>
+        <p>indexof()함수: 문자열에서 특정 문자열을 찾고, 검색된 문자열이 첫번째로 나타나는 위치 index를 리턴 
+        <br> 찾는 문자열이 없으면 -1을 리턴<br> 문자열을 찾을때 대소문자를 구분함</p>
+    </body>
+</html>

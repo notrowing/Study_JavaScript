@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                const date = new Date();
+                let hour = date.getHours();
+                let min = date.getMinutes();
+                let sec = date.getSeconds();
+
+                console.log("현재시각:"+hour+"시"+min+"분"+sec+"초");
+
+                if(hour <12){
+                    console.log("monring");
+                }
+                else if (hour < 18){
+                    console.log("lunch");
+                }
+                else{
+                    console.log("afternoon")
+                }
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>현재 시각 출력하기</h2>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>

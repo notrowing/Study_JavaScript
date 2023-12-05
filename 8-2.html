@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // '사과'와 '키위'를 각각 1초 동안 가져와서 판매
+        // Promise/then 적용
+        function getApple(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('🍎');
+                },1000)
+            });
+        }
+        function getkiwi(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('🥝');
+                },1000)
+            });
+        }
+
+        function sell(){
+            return getApple().then(apple=>{
+                return getkiwi().then(kiwi=>`${apple}+${kiwi}`);
+            });
+        }
+        sell().then(res => console.log(res));
+
+        // '체리'와 '복숭아'를 각각 2초 동안 가져와서 판매
+        // async, await 적용
+        function getCherry(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('🍒');
+                },2000)
+            });
+        }
+
+        function getPeach(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('🍑');
+                },2000)
+            });
+        }
+
+        async function sell2(){
+            const Cherry=await getCherry();
+            const Peach= await getPeach();
+            return `${Cherry}+${Peach}`;
+        }
+        sell2().then(res=>console.log(res));
+
+
+        // '레몬'과 '토마토'를 각각 3초 동안 가져와서 판매
+        // setTimeout()기능을 delay()함수로 모듈화
+
+        function delay(ms){
+            return new Promise(resolve => setTimeout(resolve,ms));
+        }
+        async function getLemon(){
+            await delay(3000);
+            return '🍋';
+        }
+        async function getTomato(){
+            await delay(3000);
+            return '🍅';
+        }
+        async function sell3(){
+            const lemon = await getLemon();
+            const tomato = await getTomato();
+            const Peach= await getPeach();
+            const apple = await getApple();
+            return `${lemon}+${tomato}+${Peach}+${apple}`;
+        }
+        sell3().then(res=>console.log(res));
+
+
+        // 병렬로 가져와서 판매하는 코드 
+        // 함수는 즉시 실행하고 데이터를 가져오는 동안 대기
+
+        async function sell4(){
+            const applePromise = getApple();
+            const KiwiPromise = getkiwi();
+            const apple2 = await applePromise;
+            const kiwi2 = await KiwiPromise;
+            return `${apple2}+${kiwi2}`;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>■ async / await</h2> <p>콘솔 실행 결과 </p>
+    <h3>1.'사과'와 '키위'를 각각 1초 동안 가져와서 판매 : Promise/then 적용</h3>
+    <h3>2.'체리'와 '복숭아'를 각각 2초 동안 가져와서 판매: async, await 적용 </h3>
+    <h3>3.'레몬'과 '토마토'를 각각 3초 동안 가져와서 판매:setTimeout()기능을 delay()함수로 모듈화 </h3>
+    <h3>4.병렬로 가져와서 판매하는 코드 </h3>
+</body>
+</html>

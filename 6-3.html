@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const array = [1,2,3,4,5];
+        let lastValue = array.pop();
+        let firstValue = array.shift();
+        array.push(firstValue);
+        array.unshift(lastValue);
+        
+        console.log(array);
+        console.log(firstValue);
+        console.log(lastValue);
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>연습문제 : 처음과 마지막 요소의 위치 변경하기</h2>
+</body>
+</html>

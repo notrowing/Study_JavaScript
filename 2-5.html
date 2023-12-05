@@ -1,0 +1,38 @@
+<!-- ■ Variable Type
+    ● Primitive (기본) : 더 이상 나눠지지 않는 하나의 값 (Single item)
+        - number, string, boolean, null, undefined
+
+    ● Reference (참조) : Single item 들을 하나의 단위로 관리
+        - { }, [ ], class
+
+    ● Function (함수)
+        - First-class Function
+        - 함수를 다른 변수와 동일하게 다루는 것 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+    
+                let bool = true;
+                console.log(Number(bool));
+                console.log(parseInt(bool));
+
+                let score = 90.5;
+                console.log(Number(score));
+                console.log(parseInt(score));
+
+                let height= '177.3';
+                console.log(Number(height));
+                console.log(parseInt(height));
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>Primitive : number </h2><hr>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>

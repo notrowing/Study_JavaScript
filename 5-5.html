@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 부모클래스
+        class Animal{
+            constructor(name){
+                this.name = name;
+                console.log();
+            }
+            
+            speak(){
+                console.log(`${this.name} mak a noise`);
+            }
+
+            behavior(){
+                console.log(`${this.name} like a person`);
+            }
+        }
+        // 자식클래스
+        class Cat extends Animal{
+            constructor(name){
+                super(name);
+            }
+        
+            speak(){
+                console.log(`${this.name} mew mew`);
+            }
+            
+        }
+
+        class Dog extends Animal{
+            constructor(name){
+                super(name);
+            }
+            speak(){
+                console.log(`${this.name} bow bow`);
+            }
+        }
+        cat = new Cat("happy");
+        cat.speak();
+        dog =  new Dog("joa");
+        dog.speak();
+
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>상속</h2>
+</body>
+</html>

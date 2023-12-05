@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const promise = new Promise((resolve,reject) => {
+            console.log('작업중.......!');
+            setTimeout(() => {
+                resolve('작업완료');
+            }, 2000);
+        });
+        // console.log(promise);
+// promise-then
+        promise.then((value)=>{  //resolve
+            console.log(value);
+        })
+        .catch((error)=>{
+            console.log(error);  //reject
+        })
+        .finally(()=> {
+            console.log('finally');
+        });
+        console.log('next');
+        
+
+// async-await
+        const run = async()=>{
+            try{
+                const value = await promise;
+                console.log(value);
+            }catch(error){
+                console.log(error);
+            }finally{
+                console.log('finally');
+            };
+        };
+        run();
+        console.log('next');
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>■ Promise - then → async - await</h2>
+</body>
+</html>  

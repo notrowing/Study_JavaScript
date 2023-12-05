@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class User{
+            constructor(firstName, lastName, age){
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+            get age(){
+                return this.age;
+            }
+            set age(value){
+               if (value < 0){
+                this._age = 0;
+               }
+               else{
+                this._age = value;
+               }
+            }
+        }
+        const user = new User('kangwook', 'lee');
+        console.log(`${user.firstName} ${user.lastName} ${user._age}`);
+
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>연습문제: Getter / Setter를 가지는 User 클래스 작성</h2>
+</body>
+</html>

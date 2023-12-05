@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                const browser='IE';
+
+                switch(browser){
+                    case "IE":
+                        console.log("go away!");
+                        break;
+                    case "Chome": 
+                    case "FireFox":
+                        console.log("LoveYou");
+                        break;
+                    default:
+                        console.log("same all!");
+                }
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>제어문 switch</h2>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>

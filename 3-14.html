@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <html>
+      <head>
+          <script>
+              function execute(){
+                const user_agent=navigator.userAgent.toUpperCase();
+                
+                if(user_agent.indexOf('TRIDENT')>=0){
+                    console.log("IE");
+                }
+                else if(user_agent.indexOf('FIREFOX')>=0){
+                    console.log("FireFox");
+                }
+                else if (user_agent.indexOf('EDG')>=0){
+                    console.log('EDG');
+                }
+                else if (user_agent.indexOf('SAFARI')>=0){
+                    console.log('Safari');
+                }
+                else if (user_agent.indexOf('CHROME')>=0){
+                    console.log('Chrome');
+                }
+                else{
+                    console.log("...")
+                }
+
+              }
+          </script>
+      </head>
+  <body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>클라이언트의 웹브라우저 종류 구분하기</h2>
+      <button type="button" onclick="execute()">
+          실행
+      </button>
+  </body>
+  </html>

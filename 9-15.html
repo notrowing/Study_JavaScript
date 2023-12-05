@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>■ Event</h2>
+    <h3>● 기본 이벤트 막기 - preventDefault()</h3>
+    <h3>연습문제<br>"이동" 링크를 클릭하면 아래와 같은 경고창을 보여주고 웹사이트 이동 막기</h3>
+        
+    <hr>
+    <a href = "http://ggoreb.com">이동</a>
+</body>
+<script>
+    const link = document.querySelector('a');
+    link.addEventListener('click',()=>{
+        window.alert('차단');
+        e.stopProPagation();
+    });
+</script>
+</html>

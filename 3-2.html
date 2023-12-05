@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+
+               let counter=2;
+               const postIncrement = counter++;
+               const preIncrement = ++counter;
+               
+
+               
+               console.log(`counter: ${counter}, pre : ${preIncrement},post: ${postIncrement}`);
+
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='main.html'">돌아가기</button>
+    <h2>증가 연산자</h2>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>
