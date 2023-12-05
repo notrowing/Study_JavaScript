@@ -1,0 +1,22 @@
+<!-- 연습문제 09-4
+검색용 해시태그 입력을 위한 사용자 편의 기능 추가하기  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>검색용 해시태그 입력을 위한 사용자 편의 기능 추가하기</h2> <hr>
+    검색어 입력 : <input type = "text" name="search" value="jeong">
+</body>
+<script>
+    const input = document.querySelector('[name=search]');
+    console.log(input.value);
+    input.addEventListener('focus',(event)=>{
+        let search = event.currentTarget.value;
+    });
+</script>
+</html>

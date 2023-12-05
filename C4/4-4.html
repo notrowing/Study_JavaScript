@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                const print = function(){
+                    console.log("print");
+                }
+                print();
+            }
+            function execute2(){
+                function print1(){
+                    console.log("print1");
+
+                }
+                print1();
+
+                const print2 = function(){
+                    console.log("print2");
+                
+                }
+                print2();
+                const print3 = function print3(){
+                    console.log("print3");
+                }
+                print3();
+                const print4=print3;
+
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h3>함수</h3>
+        <p>익명, 변수 값 할당</p>
+        <button type="button" onclick="execute()">실행</button>
+        <button type="button" onclick="execute2()">Print2 실행</button>
+    </body>
+</html>

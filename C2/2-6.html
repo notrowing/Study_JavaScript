@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                const char = 'c';
+                const username = 'developer';
+
+                const greeting = 'hello' + username;
+                console.log(`value: ${greeting}, type: ${typeof greeting}`);
+                
+                const template = `hi ${username}!`;
+                console.log(`value: ${template}, type: ${typeof template}`);
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>Primitive : String</h2>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>

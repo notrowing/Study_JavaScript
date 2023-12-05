@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const User = {
+            name : 'Bill',
+            age :20,
+        }
+        console.log(User.name);
+        
+        const user1 = {};
+        Object.assign(user1, User);
+        // user1 = User;
+        user1.name = 'Steve';
+        console.log(user1.name);
+        console.log(User);
+
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>Object: 주로 데이터 관리를 위해서 사용</h2><hr>
+    <script type="module" src="./main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                let num1 = 456;
+                let num2 = 111;
+                num1 -= num1%100;
+                num2 -= num2%100;
+
+                console.log(num1);
+                console.log(num2);
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>연습문제3-2: 백의 자리 이하 버리기</h2>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>

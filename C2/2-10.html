@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+
+                const user = { 
+                    name : 'developer', 
+                    age: 30
+                };
+                console.log(user);
+                user.age = 29;
+                console.log(user);
+
+                const arr=[1,2,3];
+                console.log(arr);
+                arr[0]=10;
+                console.log(arr);
+
+            }
+        </script>
+    </head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>Reference: object</h2>
+    <button type="button" onclick="execute()">
+        실행
+    </button>
+</body>
+</html>

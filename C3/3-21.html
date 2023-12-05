@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                let total = 0;
+
+                for(i=1; i<=100; i++){
+                    if (i%2==0){
+                        total += i;
+                    }
+                    else{
+                        continue;
+                    }
+                }
+                console.log("2의 배수의 합 => "+ total);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h3>연습문제</h3>
+        <h3>1에서 100사이의 수 중 2의 배수 합 구하기</h3>
+        <button type="button" onclick="execute()">실행</button>
+    </body>
+</html>

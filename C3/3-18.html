@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                let number = prompt("숫자를 입력");
+                let result =0;
+
+                for(let i=0; i<number.length; ++i){
+                    result += parseInt(number[i]);
+                }
+                console.log("입력된 숫자 : "+ number)
+                console.log("결과 : "+result);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h3> 각 자리 숫자들의 합 구하기 </h3>
+        <button type="button" onclick="execute()">실행</button>
+    </body>
+</html>

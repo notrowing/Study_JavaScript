@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                function sequence(){
+                    let seq =0;
+                    return function(){
+                        return ++seq;
+                    };
+                }
+                const seq = sequence();
+                console.log(seq());
+                console.log(seq());
+                console.log(seq());
+                console.log(sequence()());
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h3>Closure</h3>
+        <p>지역변수가 사라지지않고 계속 기억되는 현상 
+            <br> 호출할때마다 숫자를 증가시키는 함수</p>
+
+        <button type = "button" onclick="execute()">클릭</button>
+
+
+    </body>
+</html>

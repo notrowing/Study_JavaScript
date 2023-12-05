@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                let i = 3;
+                while(i>0){
+                    console.log(`while: ${i}`);
+                    i--;
+                }
+            }
+
+            function execute2(){
+                let i = 3;
+                while(i>0){
+                    console.log(`while: ${i}`);
+                    --i;
+                }
+            }
+
+            function execute3(){
+                let i = 3;
+
+                do{
+                    console.log(`do while: ${i}`);
+                    i--;
+                }while(i>0);
+            }
+            
+            function execute4(){
+                let i = 3;
+                
+                do{
+                    console.log(`do while: ${i}`);
+                    --i;
+                }while(i>0);
+            }
+        </script>
+
+
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h2>제어문: while</h2>
+        <hr>
+        <button type="button" onclick="execute()"> while 문 실행 [i--]</button>
+        <button type="button" onclick="execute2()"> while 문 실행 [--i]</button>
+        <button type="button" onclick="execute3()"> Do while 문 실행[i--]</button>
+        <button type="button" onclick="execute4()"> Do while 문 실행[--i]</button>
+    </body>
+</html>

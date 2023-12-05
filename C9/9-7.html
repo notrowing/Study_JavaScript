@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .target>img{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <div class = "container">
+    <h2>■ 연습문제 (09-연습문제2.html)</h2>
+    <h3>● 버튼 클릭 시 이미지 불러오기<br>
+        1. img 객체 제거 (removeChild)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- querySelector 사용 시 객체가 존재하지 않으면 null 반환<br>
+        2. img 객체 생성 (createElement)<br>
+        3. img 객체의 src 속성과 속성값 지정 (setAttribute)</h3><hr>
+    
+        <div class = "d-grid">
+            <button type = "button" class = "btn btn-primary btn-block">
+                이미지 불러오기
+            </button>
+        </div>
+        <div class="target">
+            <img>
+        </div>
+    </div>
+    <script>
+        document.querySelector('button').addEventListener('click',()=>{
+            obj = document.querySelector('img');
+            
+            obj.setAttribute("src",'http://ggoreb.com/images/choco/1.jpg');
+            document.body.innerHTML
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){
+                function foo(x){
+                    return function(y){
+                        console.log(`${x}:${y}`);
+                    }
+                }
+                const bar1 = foo("과목");
+                bar1("국어");
+                bar1("영어");
+                bar1("수학");
+
+                const bar2 = foo("성적");
+                bar2(100);
+                bar2(90);
+                bar2(80);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h3>Closure</h3>
+        <p>지역변수가 사라지지않고 계속 기억되는 현상
+            <br>분류 항목과 데이터를 저장하는 템플릿 형태의 함수</p>
+        <button type = "button" onclick="execute()">클릭</button>
+
+
+    </body>
+</html>

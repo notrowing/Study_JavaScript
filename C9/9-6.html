@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KepcoA</title>
+   
+</head>
+
+
+
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>연습문제 : 제목을 클릭하면 클릭 횟수 증가 후 출력하기</h2><hr>
+    <h1>제목</h1>
+    <h3></h3>
+</body>
+
+<script>
+    document.body.onselectstart = () => false;
+    let count = 0;
+
+    const h1 = document.querySelector('h1');
+    h1.addEventListener('click', () => {
+        count++;
+        content = "클릭횟수 :" + count;
+        obj = document.querySelector('h3');
+        obj.textContent = content;
+        console.log(content);
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function execute(){ //가변인자 (Rest {Parameter})
+              function printAll(...args){
+                for(let i=0; i<args.length; i++){
+                    console.log(args[i]);
+                }
+                for(const arg of args){
+                    console.log(arg);
+                }
+                args.forEach((arg) => console.log(arg));
+              }
+              printAll('java','script','html/css');
+            }
+            function execute2(){                //기본값 지정
+                function showMessage(message, from = 'unknown'){
+                    console.log(`${message} by ${from}`);
+                }
+                showMessage('Hi!');
+            }
+            function execute3(){
+              let globalMessage = 'global'; // global variable
+              function printMessage(){
+                let message = 'hello';
+                console.log(message); // local variable
+                console.log(globalMessage);
+              }
+              printMessage();
+              console.log(message); //현재 범위에서 선언되지 않아서 오류 
+            }
+            function execute4(){ // 결과 반환 (return)
+                function sum(a,b){
+                    return a+b;
+                }
+                const result = sum(1,2);
+                console.log(`sum: ${sum(1,2)}`);
+
+                function nothing(a,b){
+                }
+                console.log(`result: ${nothing(1,2)}`);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+        <h3>함수(Parameter)</h3>
+        <h4>기본값지정</h4>
+        <button type="button" onclick="execute2()">실행</button>
+        <hr>
+        <h4>가변인자</h4>
+        <button type="button" onclick="execute()">실행</button>
+        <hr>
+        <h4>변수의 유효범위</h4>
+        <p> 현재 범위에서 선언되지 않아서 오류 발생</p>
+        <button type="button" onclick="execute3()">실행</button>
+        <hr>
+        <h4>결과반환 (return) </h4>
+        <button type="button" onclick="execute4()">실행</button>
+        <hr>
+
+
+    </body>
+</html>

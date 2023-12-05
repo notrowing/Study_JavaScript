@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kepcoA</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>■ DOM (Document Object Model)</h2>
+    <h3> ● 웹 브라우저가 HTML을 인식하는 방식 (넓은 의미)<br>
+        ● document 객체와 관련된 객체의 집합 (좁은 의미)<br>
+        ● HTML의 Tag를 자바스크립트에서 이용할 수 있도록 객체로 만든 것<br>
+        ● Element Node / Text Node (Text Content)<br>
+        ● 문서 객체 가져오기<br>
+        - document.head / document.body / document.title</h3>
+        
+    <script>
+        console.log(document.head);
+        console.log(document.title);
+        console.log(document.body);
+
+        console.log(document.head.childNodes[1]);
+        console.log(document.head.childNodes[5]);
+
+        console.log(document.body.childNodes[1]);
+        console.log(document.body.textContent);
+    </script>
+</body>
+</html>

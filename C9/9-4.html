@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KepcoA</title>
+    <style>
+        #content{
+            font-size: 20px;
+            border: solid 2px green;
+        }
+    </style>
+    <script>
+        const obj = document.createElement('h1');
+        obj.textContent = "header";
+        obj.style.color = "red";
+        obj.style.backgroundColor = "#d9d9d9";
+        obj.setAttribute('id','title');
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.body.appendChild(obj);
+        });
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>■ DOM (Document Object Model)</h2>
+    <h3> ● 문서 객체 가져오기, 속성 지정</h3>
+    <h3>문서 객체 생성 : document.createElement('태그명')</h3>
+    <hr>
+</body>
+</html>

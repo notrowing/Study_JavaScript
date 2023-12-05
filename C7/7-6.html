@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        const formData = new FormData();
+        // XMLhttpResponse()
+        const ajax = fetch
+            ('http://ggoreb.com/ajax/html/data2.jsp',
+                {method:'post', body:formData}
+            );
+
+    ajax.then((response) => response.text())
+    .then((result) => document.querySelector(".content").innerHTML += result);
+ 
+    </script>
+    <style>
+          .content{
+            color:green;
+            border: solid 2px blue;
+            border-radius: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>■ AJAX</h2>
+    <p>● JavaScript New API (POST)</p>
+    <hr>
+    <div class = "content">
+    </div>
+</body>
+</html>

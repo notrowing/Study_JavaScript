@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Student{
+            constructor(name, age, enrolled, score){
+                this.name = name;
+                this.age = age;
+                this.enrolled = enrolled;
+                this.score=score;
+            }
+        }
+        const students = [
+            new Student('A',29, true, 45),
+            new Student('B',28, false, 80),
+            new Student('C',30, true, 90),
+            new Student('D',40, false, 66),
+            new Student('E',18, false, 90),
+        ]
+
+        //filter:해당하는 요소를 찾은 후 배열 생성 
+        // 조건에 맞는 모든 요소로 새로운 배열을 생성 
+        let result = students.filter((val,idx,arr)=>{
+        //     // console.log(arr);
+        //     // return val;
+        //     // return val.enrolled; 
+        //     // return val.name;
+                return val.score > 80 && val.enrolled;
+        });
+
+        //find: 해당하는 요소 1개 : 조건에 맞는 경우 첫번째 요소 반환
+        // let result = students.find((val,idx,arr)=>{
+        //     return val.score>80; 
+        // });
+
+        // console.log(result);
+
+        //some : 해당하는 요소가 1개 이상이면  true 
+        var result1 = students.some((val, idx, arr)=>{
+            return val.score>50;
+        })
+
+     
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h2>Array API: 찾기 [find,filter, some]</h2>
+</body>
+</html>

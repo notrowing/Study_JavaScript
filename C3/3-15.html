@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function execute(){
+            let map = ['가위','바위','보'];
+            let player = 0;
+            let computer = parseInt(Math.random()*3);
+            
+            if (computer==1){
+                console.log(`player : ${map[player]}, computer : ${map[computer]}`);
+                console.log("결과 : computer 승");
+                
+            }
+            else if(computer==2){
+                console.log(`player : ${map[player]}, computer : ${map[computer]}`);
+                console.log("결과 : player 승");
+            }
+            else {
+                console.log(`player : ${map[player]}, computer : ${map[computer]}`);
+                console.log("결과 : 비김");
+            }
+        }  
+        function execute2(){
+            let map = ['가위','바위','보'];
+            let player = 0;
+            let computer = parseInt(Math.random()*3);
+
+            switch(computer){
+                case 1:
+                    console.log(`player : ${map[player]}, computer : ${map[computer]}`);
+                    console.log("결과 : computer 승");
+                    break;
+
+                case 2:
+                    console.log(`player : ${map[player]}, computer : ${map[computer]}`);
+                    console.log("결과 : player 승");
+                    break;
+                
+                default:
+                    console.log(`player : ${map[player]}, computer : ${map[computer]}`);
+                    console.log("결과 : 비김");
+                    break; 
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" onClick="location.href='../main.html'">돌아가기</button>
+    <h3>연습문제: 가위바위보 </h3>
+    <button type="button" onclick="execute()"> if 문 클릭</button>
+    <button type="button" onclick="execute2()"> switch 문 클릭</button>
+
+</body>
+
+</html>
